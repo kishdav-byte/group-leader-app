@@ -17,12 +17,13 @@
 
 <body>
     <div id="app">
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar">
-            <div class="logo">
-                <span class="cross">†</span>
-                <h1>GroupLeader</h1>
+        <!-- Top Navigation Bar -->
+        <nav class="top-nav">
+            <div class="logo-area">
+                <div class="logo-icon">†</div>
+                <span class="logo-text">GroupLeader</span>
             </div>
+
             <ul class="nav-links">
                 <li class="active" data-page="dashboard">
                     <span class="icon">📊</span> Dashboard
@@ -34,20 +35,24 @@
                     <span class="icon">👥</span> Members
                 </li>
                 <li data-page="notes">
-                    <span class="icon">📝</span> My Notes
+                    <span class="icon">📝</span> Notes
                 </li>
                 <li data-page="prayer">
-                    <span class="icon">🙏</span> Prayer Booth
+                    <span class="icon">🙏</span> Prayer
                 </li>
                 <li data-page="leader-connect">
-                    <span class="icon">⛪</span> Church Connect
+                    <span class="icon">⛪</span> Connect
                 </li>
             </ul>
-            <div class="user-profile">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leader" alt="User Avatar" id="user-avatar">
-                <div class="user-info">
-                    <p class="name">Leader Name</p>
-                    <p class="role">Small Group Leader</p>
+
+            <div class="user-area">
+                <div class="user-profile">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leader" alt="User Avatar"
+                        id="user-avatar">
+                    <div class="user-info">
+                        <p class="name">Leader Name</p>
+                        <p class="role">Small Group Leader</p>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -55,22 +60,19 @@
         <!-- Main Content Area -->
         <main class="content">
             <header>
-                <div class="header-left">
-                    <h2 id="page-title">Welcome back, Leader</h2>
-                    <p id="page-subtitle">"Thy word is a lamp unto my feet, and a light unto my path." — Psalm 119:105
-                    </p>
-                </div>
-                <div class="header-right">
-                    <button class="btn-primary" id="new-lesson-btn">+ New Lesson</button>
-                    <div class="notification-bell">🔔</div>
-                </div>
+                <h2 id="page-title">Welcome back, Leader</h2>
+                <p id="page-subtitle">"Thy word is a lamp unto my feet, and a light unto my path." — Psalm 119:105</p>
             </header>
+
+            <div class="header-right">
+                <button class="btn-primary" id="new-lesson-btn">+ New Lesson</button>
+            </div>
 
             <section id="main-view" class="view-container">
                 <!-- Content will be injected here by main.js -->
                 <div class="loading-state">
                     <div class="spinner"></div>
-                    <p>Washing our hearts in the Word...</p>
+                    <p>Loading your workspace...</p>
                 </div>
             </section>
         </main>

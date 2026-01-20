@@ -93,30 +93,28 @@ function renderDashboard(container) {
     container.innerHTML = `
         <div class="dashboard-grid">
             <div class="stat-card">
-                <h3>Vessels of Grace</h3>
+                <h3>Group Members</h3>
                 <p class="value">${state.members.length}</p>
             </div>
             <div class="stat-card">
-                <h3>Scripted Lessons</h3>
+                <h3>Lessons Created</h3>
                 <p class="value">${state.lessons.length}</p>
             </div>
             <div class="stat-card">
-                <h3>Incense Prayers</h3>
+                <h3>Prayer Requests</h3>
                 <p class="value">12</p>
             </div>
         </div>
 
-        <div style="margin: 4rem 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.3;"></div>
-
-        <div class="recent-activity">
-            <h3 style="margin-bottom: 2rem; font-family: var(--font-serif); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.9rem; color: var(--primary);">Upcoming Gatherings</h3>
-            <div class="lesson-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
+        <div style="margin: 3rem 0;">
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text-primary);">Upcoming Lessons</h3>
+            <div class="lesson-grid">
                 ${state.lessons.map(lesson => `
                     <div class="lesson-card">
-                        <span class="topic" style="color: var(--primary); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;">${lesson.topic}</span>
-                        <h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin: 1rem 0; font-weight: 400;">${lesson.title}</h4>
-                        <div class="lesson-meta" style="border-top: 1px solid rgba(192, 160, 96, 0.1); padding-top: 1rem; margin-top: 1rem; display: flex; justify-content: space-between; font-size: 0.7rem; letter-spacing: 0.05em; color: var(--text-muted);">
-                            <span>${lesson.date}</span>
+                        <span class="topic">${lesson.topic}</span>
+                        <h4>${lesson.title}</h4>
+                        <div class="lesson-meta">
+                            <span>📅 ${lesson.date}</span>
                             <span>${lesson.status}</span>
                         </div>
                     </div>
@@ -124,14 +122,14 @@ function renderDashboard(container) {
             </div>
         </div>
 
-        <div class="ai-suggestion-box" style="margin-top: 5rem; padding: 3rem; border-radius: 0;">
-            <h4 style="color: var(--primary); margin-bottom: 1rem; font-family: var(--font-serif); font-size: 1.2rem; display: flex; align-items: center; gap: 0.75rem;">
-                <span style="font-size: 1.5rem;">✨</span> Divine Insight Assistant
+        <div class="ai-suggestion-box">
+            <h4>
+                <span>✨</span> Bible AI Assistant
             </h4>
-            <p style="color: var(--text-main); font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; line-height: 1.6; max-width: 800px;">
-                "Consider centering your next gathering on <strong>The Peace which Passeth Understanding</strong>. Based on Philippians 4:6-7, it would offer great solace to your members navigating recent transitions."
+            <p>
+                "Consider focusing your next lesson on <strong>Patience in Times of Trials</strong> based on James 1:2-4. Your group has expressed several challenges this week."
             </p>
-            <button class="btn-primary" style="margin-top: 2rem;">Ascend to Drafting</button>
+            <button class="btn-primary">Generate Lesson Plan</button>
         </div>
     `;
 }
