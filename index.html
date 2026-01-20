@@ -4,81 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Leader | Grounded in Christ</title>
+    <title>GroupLeader | By His Word We Lead</title>
     <meta name="description"
-        content="A premium tool for small group leaders to plan lessons, take notes, and stay grounded in the Word of God.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+        content="A sacred tool for small group leaders, grounded in scripture and guided by faith.">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
     <div id="app">
-        <!-- Top Navigation Bar -->
-        <nav class="top-nav">
-            <div class="logo-area">
-                <div class="logo-icon">†</div>
+        <!-- Sacred Header -->
+        <header class="sacred-header">
+            <div class="logo-sacred">
+                <div class="cross-ornate"></div>
                 <span class="logo-text">GroupLeader</span>
             </div>
 
-            <ul class="nav-links">
-                <li class="active" data-page="dashboard">
-                    <span class="icon">📊</span> Dashboard
-                </li>
-                <li data-page="lessons">
-                    <span class="icon">📖</span> Lessons
-                </li>
-                <li data-page="members">
-                    <span class="icon">👥</span> Members
-                </li>
-                <li data-page="notes">
-                    <span class="icon">📝</span> Notes
-                </li>
-                <li data-page="prayer">
-                    <span class="icon">🙏</span> Prayer
-                </li>
-                <li data-page="leader-connect">
-                    <span class="icon">⛪</span> Connect
-                </li>
-            </ul>
-
-            <div class="user-area">
-                <div class="user-profile">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leader" alt="User Avatar"
-                        id="user-avatar">
-                    <div class="user-info">
-                        <p class="name">Leader Name</p>
-                        <p class="role">Small Group Leader</p>
-                    </div>
+            <!-- User Profile -->
+            <div class="user-profile">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Leader" alt="User Avatar" id="user-avatar">
+                <div class="user-info">
+                    <p class="name">David Kish</p>
+                    <p class="role">Shepherd of His Flock</p>
                 </div>
             </div>
+        </header>
+
+        <!-- Verse of the Week -->
+        <section class="verse-of-week">
+            <p class="verse-label">Verse of the Week</p>
+            <p class="verse-text" id="verse-text">
+                For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you
+                a future and a hope.
+            </p>
+            <p class="verse-reference" id="verse-reference">— Jeremiah 29:11</p>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="nav-sacred">
+            <ul class="nav-links">
+                <li class="active" data-page="dashboard">Dashboard</li>
+                <li data-page="lessons">Lessons</li>
+                <li data-page="members">Members</li>
+                <li data-page="notes">Notes</li>
+                <li data-page="prayer">Prayer</li>
+                <li data-page="leader-connect">Church Connect</li>
+            </ul>
         </nav>
 
-        <!-- Main Content Area -->
+        <!-- Main Content -->
         <main class="content">
-            <header>
+            <div class="page-header">
                 <h2 id="page-title">Welcome back, Leader</h2>
-                <p id="page-subtitle">"Thy word is a lamp unto my feet, and a light unto my path." — Psalm 119:105</p>
-            </header>
-
-            <div class="header-right">
-                <button class="btn-primary" id="new-lesson-btn">+ New Lesson</button>
+                <p id="page-subtitle">"Shepherd the flock of God that is among you" — 1 Peter 5:2</p>
             </div>
 
             <section id="main-view" class="view-container">
-                <!-- Content will be injected here by main.js -->
+                <!-- Content injected here -->
                 <div class="loading-state">
                     <div class="spinner"></div>
-                    <p>Loading your workspace...</p>
+                    <p>Preparing your sacred workspace...</p>
                 </div>
             </section>
         </main>
 
-        <!-- Premium Print Template -->
-        <div class="print-page">
+        <!-- Print Template -->
+        <div class="print-page hidden">
             <div class="print-header">
                 <h1>Group Study: <span id="print-title">Lesson Title</span></h1>
                 <p>"Where two or three are gathered together in my name, there am I in the midst of them." — Matthew
